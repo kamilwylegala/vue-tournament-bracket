@@ -47,6 +47,5 @@
 <style>
     .vtb-wrapper {
         display: flex;
-        height: 100%;
     }
 </style>
