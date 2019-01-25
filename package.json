@@ -2,6 +2,8 @@
   "name": "vue-tournament-bracket",
   "version": "0.1.0",
   "license": "MIT",
+  "author": "Kamil Wylegała <kamil.wylegala@gmail.com>",
+  "description": "Vue component for rendering single elemination tournament brackets.",
   "main": "dist/vtb.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
