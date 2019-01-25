@@ -4,7 +4,14 @@ Vue component for rendering single elemination tournament brackets.
 
 Based on: https://codepen.io/sdudnyk/pen/bWbqMb
 
+![Example](./docs/example.png)
+
 ## Installation and component usage
+
+Install component via:
+```
+npm install vue-tournament-bracket
+```
 
 Example:
 ```html
