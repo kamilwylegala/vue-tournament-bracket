@@ -1,14 +1,13 @@
 {
   "name": "vue-tournament-bracket",
-  "version": "0.1.0",
+  "version": "1.0.0-beta",
   "license": "MIT",
   "author": "Kamil Wylegała <kamil.wylegala@gmail.com>",
   "description": "Vue component for rendering single elemination tournament brackets.",
   "main": "dist/vtb.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name vtb ./src/Bracket.vue",
+    "build": "vue-cli-service build --target lib --name vue-tournament-bracket ./src/Bracket.vue",
     "lint": "vue-cli-service lint",
     "eslint": "eslint src test --ignore-pattern *bundle* --ext js,vue",
     "test": "mocha --require should test/**/*.test.js"
