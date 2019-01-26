@@ -4,6 +4,8 @@ Vue component for rendering single elemination tournament brackets.
 
 Based on: https://codepen.io/sdudnyk/pen/bWbqMb
 
+Rendering is based on **flex**, see [browser support](https://caniuse.com/#feat=flexbox).
+
 ![Example](https://github.com/kamilwylegala/vue-tournament-bracket/raw/master/docs/example.png)
 
 ## Installation and component usage
@@ -66,6 +68,17 @@ Example:
     }
 </script>
 ```
+
+### Player object
+
+Player object requires: `id` property, `winner` is optional, rest is up to you - rendering is customizable via scoped slot.
+
+- `id` is being used for highlighting
+- `winner` property applies color for player accordingly, can be also `null` - player's color will be gray
+
+### Styling
+
+Apply your custom style by overriding `Bracket` component CSS. See [BracketNode.vue](./src/components/BracketNode.vue) for all styles being used.
 
 ## Development
 

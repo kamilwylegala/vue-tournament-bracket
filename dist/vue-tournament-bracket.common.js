@@ -510,30 +510,31 @@ exports.push([module.i, ".vtb-wrapper{display:-webkit-box;display:-ms-flexbox;di
 module.exports = {
   transform: function transform(rounds) {
     var totalRounds = rounds.length;
-    var currentGames;
-    var previousGames = [];
+    var currentRound;
+    var previousRound = [];
 
     var _loop = function _loop(i) {
-      currentGames = rounds[i].games.map(function (game) {
+      currentRound = rounds[i].games.map(function (game) {
         return {
           player1: game.player1,
           player2: game.player2,
           title: "round " + i,
-          games: []
+          games: [],
+          hasParent: !!rounds[i + 1]
         };
       });
 
-      if (previousGames.length === 0) {
-        previousGames = currentGames;
+      if (previousRound.length === 0) {
+        previousRound = currentRound;
         return "continue";
       }
 
-      for (var j = 0; j < previousGames.length; j++) {
+      for (var j = 0; j < previousRound.length; j++) {
         var matchForCurrentGame = Math.floor(j / 2);
-        currentGames[matchForCurrentGame].games.push(previousGames[j]);
+        currentRound[matchForCurrentGame].games.push(previousRound[j]);
       }
 
-      previousGames = currentGames;
+      previousRound = currentRound;
     };
 
     for (var i = 0; i < totalRounds; i++) {
@@ -542,7 +543,7 @@ module.exports = {
       if (_ret === "continue") continue;
     }
 
-    return currentGames[0];
+    return currentRound[0];
   }
 };
 
@@ -587,18 +588,18 @@ var staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/Bracket.vue?vue&type=template&id=0fa3a017&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"325c1899-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BracketNode.vue?vue&type=template&id=657681ac&
-var BracketNodevue_type_template_id_657681ac_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vtb-item"},[_c('div',{class:_vm.getBracketNodeClass(_vm.bracketNode)},[_c('game-players',{attrs:{"bracket-node":_vm.bracketNode,"highlighted-player-id":_vm.highlightedPlayerId},on:{"onSelectedPlayer":_vm.highlightPlayer,"onDeselectedPlayer":_vm.unhighlightPlayer},scopedSlots:_vm._u([{key:"player",fn:function(ref){
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"325c1899-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BracketNode.vue?vue&type=template&id=908c14aa&
+var BracketNodevue_type_template_id_908c14aa_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vtb-item"},[_c('div',{class:_vm.getBracketNodeClass(_vm.bracketNode)},[_c('game-players',{attrs:{"bracket-node":_vm.bracketNode,"highlighted-player-id":_vm.highlightedPlayerId},on:{"onSelectedPlayer":_vm.highlightPlayer,"onDeselectedPlayer":_vm.unhighlightPlayer},scopedSlots:_vm._u([{key:"player",fn:function(ref){
 var player = ref.player;
 return [_vm._t("player",null,{player:player})]}}])})],1),(_vm.bracketNode.games[0] || _vm.bracketNode.games[1])?_c('div',{staticClass:"vtb-item-children"},[(_vm.bracketNode.games[0])?_c('div',{staticClass:"vtb-item-child"},[_c('bracket-node',{attrs:{"bracket-node":_vm.bracketNode.games[0],"highlighted-player-id":_vm.highlightedPlayerId},on:{"onSelectedPlayer":_vm.highlightPlayer,"onDeselectedPlayer":_vm.unhighlightPlayer},scopedSlots:_vm._u([{key:"player",fn:function(ref){
 var player = ref.player;
 return [_vm._t("player",null,{player:player})]}}])})],1):_vm._e(),(_vm.bracketNode.games[1])?_c('div',{staticClass:"vtb-item-child"},[_c('bracket-node',{attrs:{"bracket-node":_vm.bracketNode.games[1],"highlighted-player-id":_vm.highlightedPlayerId},on:{"onSelectedPlayer":_vm.highlightPlayer,"onDeselectedPlayer":_vm.unhighlightPlayer},scopedSlots:_vm._u([{key:"player",fn:function(ref){
 var player = ref.player;
 return [_vm._t("player",null,{player:player})]}}])})],1):_vm._e()]):_vm._e()])}
-var BracketNodevue_type_template_id_657681ac_staticRenderFns = []
+var BracketNodevue_type_template_id_908c14aa_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/BracketNode.vue?vue&type=template&id=657681ac&
+// CONCATENATED MODULE: ./src/components/BracketNode.vue?vue&type=template&id=908c14aa&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"325c1899-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/GamePlayers.vue?vue&type=template&id=7a46b188&
 var GamePlayersvue_type_template_id_7a46b188_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vtb-item-players"},[_c('div',{class:_vm.getPlayerClass(_vm.bracketNode.player1),on:{"mouseover":function($event){_vm.highlightPlayer(_vm.bracketNode.player1.id)},"mouseleave":_vm.unhighlightPlayer}},[_vm._t("player",null,{player:_vm.bracketNode.player1})],2),_c('div',{class:_vm.getPlayerClass(_vm.bracketNode.player2),on:{"mouseover":function($event){_vm.highlightPlayer(_vm.bracketNode.player2.id)},"mouseleave":_vm.unhighlightPlayer}},[_vm._t("player",null,{player:_vm.bracketNode.player2})],2)])}
@@ -833,7 +834,11 @@ component.options.__file = "GamePlayers.vue"
         return "vtb-item-parent";
       }
 
-      return "vtb-item-child";
+      if (bracketNode.hasParent) {
+        return "vtb-item-child";
+      }
+
+      return "";
     },
     getPlayerClass: function getPlayerClass(player) {
       if (player.winner === null || player.winner === undefined) {
@@ -872,8 +877,8 @@ var BracketNodevue_type_style_index_0_lang_css_ = __webpack_require__("d051");
 
 var BracketNode_component = normalizeComponent(
   components_BracketNodevue_type_script_lang_js_,
-  BracketNodevue_type_template_id_657681ac_render,
-  BracketNodevue_type_template_id_657681ac_staticRenderFns,
+  BracketNodevue_type_template_id_908c14aa_render,
+  BracketNodevue_type_template_id_908c14aa_staticRenderFns,
   false,
   null,
   null,
