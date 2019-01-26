@@ -1,9 +1,13 @@
 module.exports = {
 
     transform(rounds) {
+        if (!rounds) {
+            return null;
+        }
+
         const totalRounds = rounds.length;
 
-        let currentRound;
+        let currentRound = [];
         let previousRound = [];
 
         for (let i = 0; i < totalRounds; i++) {
@@ -32,7 +36,7 @@ module.exports = {
         }
 
 
-        return currentRound[0];
+        return currentRound[0] || null;
     }
 
 };

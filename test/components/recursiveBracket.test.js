@@ -1,3 +1,4 @@
+const should = require("should");
 const recursiveBracket = require("../../src/components/recursiveBracket");
 
 describe("recursive bracket", () => {
@@ -182,6 +183,18 @@ describe("recursive bracket", () => {
                 }
             ]
         });
+    });
+
+    it("should return null output for empty rounds array", () => {
+        const result = recursiveBracket.transform([]);
+
+        should(result).be.null();
+    });
+
+    it("should return null output for empty null rounds", () => {
+        const result = recursiveBracket.transform(null);
+
+        should(result).be.null();
     });
 
 });
