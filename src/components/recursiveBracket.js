@@ -3,35 +3,36 @@ module.exports = {
     transform(rounds) {
         const totalRounds = rounds.length;
 
-        let currentGames;
-        let previousGames = [];
+        let currentRound;
+        let previousRound = [];
 
         for (let i = 0; i < totalRounds; i++) {
-            currentGames = rounds[i].games.map(game => {
+            currentRound = rounds[i].games.map(game => {
                 return {
                     player1: game.player1,
                     player2: game.player2,
                     title: "round " + i,
-                    games: []
+                    games: [],
+                    hasParent: !!rounds[i+1]
                 }
             });
 
-            if (previousGames.length === 0) {
-                previousGames = currentGames;
+            if (previousRound.length === 0) {
+                previousRound = currentRound;
                 continue;
             }
 
 
-            for (let j = 0; j < previousGames.length; j++) {
+            for (let j = 0; j < previousRound.length; j++) {
                 const matchForCurrentGame = Math.floor(j / 2);
-                currentGames[matchForCurrentGame].games.push(previousGames[j]);
+                currentRound[matchForCurrentGame].games.push(previousRound[j]);
             }
 
-            previousGames = currentGames;
+            previousRound = currentRound;
         }
 
 
-        return currentGames[0];
+        return currentRound[0];
     }
 
 };

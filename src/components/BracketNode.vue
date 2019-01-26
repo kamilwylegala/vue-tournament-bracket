@@ -57,7 +57,11 @@
                     return "vtb-item-parent";
                 }
 
-                return "vtb-item-child";
+                if (bracketNode.hasParent) {
+                    return "vtb-item-child";
+                }
+
+                return "";
             },
             getPlayerClass(player) {
                 if (player.winner === null || player.winner === undefined) {

@@ -18,6 +18,7 @@ describe("recursive bracket", () => {
             player1: { id: "4", name: "Competitor 4", winner: false },
             player2: { id: "8", name: "Competitor 8", winner: true },
             title: "round 0",
+            hasParent: false,
             games: []
         });
     });
@@ -54,9 +55,11 @@ describe("recursive bracket", () => {
             player1: { id: "4", name: "Competitor 4", winner: false },
             player2: { id: "8", name: "Competitor 8", winner: true },
             title: "round 1",
+            hasParent: false,
             games: [
                 {
                     games: [],
+                    hasParent: true,
                     player1: {
                         id: "1",
                         name: "Competitor 1",
@@ -71,6 +74,7 @@ describe("recursive bracket", () => {
                 },
                 {
                     games: [],
+                    hasParent: true,
                     player1: {
                         id: "5",
                         name: "Competitor 5",
@@ -128,6 +132,7 @@ describe("recursive bracket", () => {
             player1: { id: "4", name: "Competitor 4", winner: false },
             player2: { id: "8", name: "Competitor 8", winner: true },
             title: "round 2",
+            hasParent: false,
             games: [
                 {
                     player1: {
@@ -140,6 +145,7 @@ describe("recursive bracket", () => {
                         name: "Competitor 5",
                         winner: true
                     },
+                    hasParent: true,
                     title: "round 1",
                     games: [
                         {
@@ -153,6 +159,7 @@ describe("recursive bracket", () => {
                                 name: "Competitor 4",
                                 winner: true
                             },
+                            hasParent: true,
                             title: "round 0",
                             games: []
                         },
@@ -167,6 +174,7 @@ describe("recursive bracket", () => {
                                 name: "Competitor 8",
                                 winner: true
                             },
+                            hasParent: true,
                             title: "round 0",
                             games: []
                         }
