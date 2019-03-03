@@ -2,12 +2,14 @@
 
 Vue component for rendering single elemination tournament brackets.
 
-Based on: https://codepen.io/sdudnyk/pen/bWbqMb
+Based on: [https://codepen.io/sdudnyk/pen/bWbqMb](https://codepen.io/sdudnyk/pen/bWbqMb).
 
 Rendering is based on **flex**, see [browser support](https://caniuse.com/#feat=flexbox).
 
 ![Example](https://github.com/kamilwylegala/vue-tournament-bracket/raw/master/docs/example.png)
 
+Real life example can be found here: [panel-rejestracyjny.pl](https://panel-rejestracyjny.pl/).
+ 
 ## Installation and component usage
 
 Install component via:
@@ -29,7 +31,7 @@ Example:
     import Bracket from "vue-tournament-bracket";
 
     const rounds = [
-        //Semi
+        //Semi finals
         {
             games: [
                 {
@@ -68,6 +70,51 @@ Example:
     }
 </script>
 ```
+
+#### Third place play-off
+
+Here is the way to represent third place play-off:
+```javascript
+const rounds = [
+        //Semi finals
+        {
+            games: [
+                {
+
+                    player1: { id: "1", name: "Competitor 1", winner: false },
+                    player2: { id: "4", name: "Competitor 4", winner: true },
+                },
+                {
+
+                    player1: { id: "5", name: "Competitor 5", winner: false },
+                    player2: { id: "8", name: "Competitor 8", winner: true },
+                }
+            ]
+        },
+        //Third place play off
+        {
+            games: [
+                {
+
+                    player1: { id: "1", name: "Competitor 1", winner: false },
+                    player2: { id: "5", name: "Competitor 5", winner: true },
+                }
+            ]
+        },
+        //Final
+        {
+            games: [
+                {
+
+                    player1: { id: "4", name: "Competitor 4", winner: false },
+                    player2: { id: "8", name: "Competitor 8", winner: true },
+                }
+            ]
+        }
+    ];
+```
+
+![Third place play-off](https://github.com/kamilwylegala/vue-tournament-bracket/raw/master/docs/thirdplaceplayoff.png)
 
 ### Player object
 
