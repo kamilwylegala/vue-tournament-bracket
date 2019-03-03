@@ -139,6 +139,16 @@ Then open browser and test your changes using `App.vue` main component for devel
 
 See `package.json` to discover available commands.
 
+## Releasing
+
+```
+npm run build
+git commit
+npm version <version>
+git push
+npm publish --access=public
+```
+
 ## License
 
 MIT
