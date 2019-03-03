@@ -605,12 +605,12 @@ var BracketNodevue_type_template_id_908c14aa_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/BracketNode.vue?vue&type=template&id=908c14aa&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"325c1899-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/GamePlayers.vue?vue&type=template&id=7a46b188&
-var GamePlayersvue_type_template_id_7a46b188_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vtb-item-players"},[_c('div',{class:_vm.getPlayerClass(_vm.bracketNode.player1),on:{"mouseover":function($event){_vm.highlightPlayer(_vm.bracketNode.player1.id)},"mouseleave":_vm.unhighlightPlayer}},[_vm._t("player",null,{player:_vm.bracketNode.player1})],2),_c('div',{class:_vm.getPlayerClass(_vm.bracketNode.player2),on:{"mouseover":function($event){_vm.highlightPlayer(_vm.bracketNode.player2.id)},"mouseleave":_vm.unhighlightPlayer}},[_vm._t("player",null,{player:_vm.bracketNode.player2})],2)])}
-var GamePlayersvue_type_template_id_7a46b188_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"325c1899-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/GamePlayers.vue?vue&type=template&id=69df034f&
+var GamePlayersvue_type_template_id_69df034f_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vtb-item-players"},[_c('div',{class:['vtb-player1', _vm.getPlayerClass(_vm.bracketNode.player1)],on:{"mouseover":function($event){_vm.highlightPlayer(_vm.bracketNode.player1.id)},"mouseleave":_vm.unhighlightPlayer}},[_vm._t("player",null,{player:_vm.bracketNode.player1})],2),_c('div',{class:['vtb-player2', _vm.getPlayerClass(_vm.bracketNode.player2)],on:{"mouseover":function($event){_vm.highlightPlayer(_vm.bracketNode.player2.id)},"mouseleave":_vm.unhighlightPlayer}},[_vm._t("player",null,{player:_vm.bracketNode.player2})],2)])}
+var GamePlayersvue_type_template_id_69df034f_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/GamePlayers.vue?vue&type=template&id=7a46b188&
+// CONCATENATED MODULE: ./src/components/GamePlayers.vue?vue&type=template&id=69df034f&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/GamePlayers.vue?vue&type=script&lang=js&
 //
@@ -767,8 +767,8 @@ function normalizeComponent (
 
 var component = normalizeComponent(
   components_GamePlayersvue_type_script_lang_js_,
-  GamePlayersvue_type_template_id_7a46b188_render,
-  GamePlayersvue_type_template_id_7a46b188_staticRenderFns,
+  GamePlayersvue_type_template_id_69df034f_render,
+  GamePlayersvue_type_template_id_69df034f_staticRenderFns,
   false,
   null,
   null,

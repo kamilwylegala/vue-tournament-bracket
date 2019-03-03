@@ -2,7 +2,7 @@
     <div class="vtb-item-players">
 
         <div
-            :class="getPlayerClass(bracketNode.player1)"
+            :class="['vtb-player1', getPlayerClass(bracketNode.player1)]"
             @mouseover="highlightPlayer(bracketNode.player1.id)"
             @mouseleave="unhighlightPlayer"
         >
@@ -10,7 +10,7 @@
         </div>
 
         <div
-            :class="getPlayerClass(bracketNode.player2)"
+            :class="['vtb-player2', getPlayerClass(bracketNode.player2)]"
             @mouseover="highlightPlayer(bracketNode.player2.id)"
             @mouseleave="unhighlightPlayer"
         >
