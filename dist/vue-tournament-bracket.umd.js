@@ -639,7 +639,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"98b56a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Bracket.vue?vue&type=template&id=02dad778&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"85ae12ba-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Bracket.vue?vue&type=template&id=02dad778&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.recursiveBracket)?_c('div',{staticClass:"vtb-wrapper"},[_c('bracket-node',{attrs:{"bracket-node":_vm.recursiveBracket,"highlighted-player-id":_vm.highlightedPlayerId},on:{"onSelectedPlayer":_vm.highlightPlayer,"onDeselectedPlayer":_vm.unhighlightPlayer},scopedSlots:_vm._u([{key:"player",fn:function(ref){
 var player = ref.player;
 return [_vm._t("player",null,{player:player})]}}])})],1):_vm._e()}
@@ -648,7 +648,7 @@ var staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/Bracket.vue?vue&type=template&id=02dad778&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"98b56a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BracketNode.vue?vue&type=template&id=908c14aa&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"85ae12ba-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BracketNode.vue?vue&type=template&id=908c14aa&
 var BracketNodevue_type_template_id_908c14aa_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vtb-item"},[_c('div',{class:_vm.getBracketNodeClass(_vm.bracketNode)},[_c('game-players',{attrs:{"bracket-node":_vm.bracketNode,"highlighted-player-id":_vm.highlightedPlayerId},on:{"onSelectedPlayer":_vm.highlightPlayer,"onDeselectedPlayer":_vm.unhighlightPlayer},scopedSlots:_vm._u([{key:"player",fn:function(ref){
 var player = ref.player;
 return [_vm._t("player",null,{player:player})]}}])})],1),(_vm.bracketNode.games[0] || _vm.bracketNode.games[1])?_c('div',{staticClass:"vtb-item-children"},[(_vm.bracketNode.games[0])?_c('div',{staticClass:"vtb-item-child"},[_c('bracket-node',{attrs:{"bracket-node":_vm.bracketNode.games[0],"highlighted-player-id":_vm.highlightedPlayerId},on:{"onSelectedPlayer":_vm.highlightPlayer,"onDeselectedPlayer":_vm.unhighlightPlayer},scopedSlots:_vm._u([{key:"player",fn:function(ref){
@@ -661,7 +661,7 @@ var BracketNodevue_type_template_id_908c14aa_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/BracketNode.vue?vue&type=template&id=908c14aa&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"98b56a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/GamePlayers.vue?vue&type=template&id=69df034f&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"85ae12ba-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/GamePlayers.vue?vue&type=template&id=69df034f&
 var GamePlayersvue_type_template_id_69df034f_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vtb-item-players"},[_c('div',{class:['vtb-player1', _vm.getPlayerClass(_vm.bracketNode.player1)],on:{"mouseover":function($event){_vm.highlightPlayer(_vm.bracketNode.player1.id)},"mouseleave":_vm.unhighlightPlayer}},[_vm._t("player",null,{player:_vm.bracketNode.player1})],2),_c('div',{class:['vtb-player2', _vm.getPlayerClass(_vm.bracketNode.player2)],on:{"mouseover":function($event){_vm.highlightPlayer(_vm.bracketNode.player2.id)},"mouseleave":_vm.unhighlightPlayer}},[_vm._t("player",null,{player:_vm.bracketNode.player2})],2)])}
 var GamePlayersvue_type_template_id_69df034f_staticRenderFns = []
 
