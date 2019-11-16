@@ -152,7 +152,7 @@
     }
     .vtb-item-players .waiting{
         background-color: #abbccd;
-	color: black;
+	    color: black;
     }
      .vtb-item-players .waiting.highlight {
         background-color: #abcdef;
