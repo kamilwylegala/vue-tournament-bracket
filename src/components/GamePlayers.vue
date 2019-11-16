@@ -28,7 +28,7 @@
         props: ["bracketNode", "highlightedPlayerId"],
         methods: {
             test(player) {
-                
+            	if (player.id != -1)    
                 console.log(player.id);
             },
             getPlayerClass(player) {
@@ -39,6 +39,10 @@
                 let clazz = player.winner
                     ? "winner"
                     : "defeated";
+
+		if (!player.det) {
+			clazz = "waiting";
+		}
 
                 if (this.highlightedPlayerId === player.id) {
                     clazz += " highlight";

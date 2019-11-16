@@ -99,6 +99,7 @@
 </script>
 
 <style>
+	@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
     /* The tournament */
     .vtb-item {
         display: flex;
@@ -129,6 +130,8 @@
 
     .vtb-item-players div {
         padding: 10px;
+	min-width: 100px;
+	text-align: center;
     }
 
     .vtb-item-players .winner {
@@ -149,11 +152,11 @@
     }
     .vtb-item-players .waiting{
         background-color: #abbccd;
+	color: black;
     }
-     .vtb-item-players .waiting{
+     .vtb-item-players .waiting.highlight {
         background-color: #abcdef;
     }
-
 
 
     .vtb-item-parent:after {

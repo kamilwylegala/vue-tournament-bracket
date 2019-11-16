@@ -14,20 +14,20 @@
         {
             games: [
                 {
-                    player1: { id: "1", name: "Competitor 1", winner: true },
-                    player2: { id: "2", name: "Competitor 2", winner: false },
+                    player1: { id: 1, name: "Competitor 1", det: true, winner: true },
+                    player2: { id: 2, name: "Competitor 2", det: true, winner: false },
                 },
                 {
-                    player1: { id: "3", name: "Competitor 3", winner: false },
-                    player2: { id: "4", name: "Competitor 4", winner: true },
+                    player1: { id: 3, name: "Competitor 3", det: true, winner: false },
+                    player2: { id: 4, name: "Competitor 4", det: true, winner: true },
                 },
                 {
-                    player1: { id: "5", name: "Competitor 5", winner: true },
-                    player2: { id: "6", name: "Competitor 6", winner: false }
+                    player1: { id: 5, name: "Competitor 5", det: true, winner: true },
+                    player2: { id: 6, name: "Competitor 6", det: true, winner: false }
                 },
                 {
-                    player1: { id: "7", name: "Competitor 7", winner: false },
-                    player2: { id: "8", name: "Competitor 8", winner: true },
+                    player1: { id: 7, name: "Competitor 7", det: true, winner: false },
+                    player2: { id: 8, name: "Competitor 8", det: true, winner: true },
                 }
             ],
         },
@@ -36,13 +36,13 @@
             games: [
                 {
 
-                    player1: { id: "1", name: "Competitor 1", winner: false },
-                    player2: { id: "4", name: "Competitor 4", winner: true },
+                    player1: { id: 1, name: "Competitor 1", det: true, winner: false },
+                    player2: { id: 4, name: "Competitor 4", det: true, winner: true },
                 },
                 {
 
-                    player1: { id: "5", name: "Competitor 5", winner: false },
-                    player2: { id: "8", name: "Competitor 8", winner: true },
+                    player1: { id: 5, name: "Competitor 5", det: false, winner: false },
+                    player2: { id: 8, name: "Competitor 8", det: false, winner: true },
                 }
             ]
         },
@@ -51,8 +51,8 @@
             games: [
                 {
 
-                    player1: { id: "4", name: "Competitor 4", winner: false },
-                    player2: { id: "8", name: "Competitor 8", winner: true },
+                    player1: { id: 4, name: "Competitor 4", det: false, winner: false },
+                    player2: { id: -1, name: "", det: false, winner: true },
                 }
             ]
         }
@@ -70,3 +70,9 @@
         }
     };
 </script>
+<style>
+
+html, body {
+	font-family: "Roboto";
+};
+</style>
