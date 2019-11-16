@@ -1,17 +1,23 @@
 <template>
     <div class="vtb-item">
 
-        <div :class="getBracketNodeClass(bracketNode)">
-            <game-players
+        <div :class="getBracketNodeClass(bracketNode)"
+            
+             >
+            
+            
+            <game-players 
                 :bracket-node="bracketNode"
                 :highlighted-player-id="highlightedPlayerId"
                 @onSelectedPlayer="highlightPlayer"
                 @onDeselectedPlayer="unhighlightPlayer"
+                
             >
                 <template slot="player" slot-scope="{ player }">
-                    <slot name="player" :player="player"/>
+                    <slot   name="player" :player="player"/>
                 </template>
             </game-players>
+            
         </div>
 
         <div v-if="bracketNode.games[0] || bracketNode.games[1]" class="vtb-item-children">
@@ -52,6 +58,10 @@
         components: {GamePlayers},
         props: ["bracketNode", "highlightedPlayerId"],
         methods: {
+
+            test(playerId){
+                console.log(playerId);
+            },
             getBracketNodeClass(bracketNode) {
                 if (bracketNode.games[0] || bracketNode.games[1]) {
                     return "vtb-item-parent";
@@ -89,6 +99,7 @@
 </script>
 
 <style>
+    /* The tournament */
     .vtb-item {
         display: flex;
         flex-direction: row-reverse;
@@ -107,11 +118,13 @@
         align-items: center;
     }
 
+    /* css for both players */
     .vtb-item-players {
         flex-direction: column;
         background-color: #999999;
         margin: 0;
         color: white;
+        /* text-shadow: -3px 3px 2px black; */
     }
 
     .vtb-item-players div {
@@ -119,20 +132,29 @@
     }
 
     .vtb-item-players .winner {
-        background-color: darkgreen;
+        background-color: #66e666;
+        
     }
 
     .vtb-item-players .defeated {
-        background-color: firebrick;
+        background-color: #c44444;
     }
 
     .vtb-item-players .winner.highlight {
-        background-color: darkseagreen;
+        background-color: #88f888;
     }
 
     .vtb-item-players .defeated.highlight {
-        background-color: indianred;
+        background-color: #f66666;
     }
+    .vtb-item-players .waiting{
+        background-color: #abbccd;
+    }
+     .vtb-item-players .waiting{
+        background-color: #abcdef;
+    }
+
+
 
     .vtb-item-parent:after {
         position: absolute;
@@ -159,6 +181,8 @@
         margin-bottom: 10px;
         position: relative;
     }
+    
+   
 
     .vtb-item-child:before {
         content: '';

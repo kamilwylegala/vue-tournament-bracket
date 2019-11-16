@@ -15,7 +15,7 @@
             games: [
                 {
                     player1: { id: "1", name: "Competitor 1", winner: true },
-                    player2: { id: "2", name: "Competitor 2", winner: false }
+                    player2: { id: "2", name: "Competitor 2", winner: false },
                 },
                 {
                     player1: { id: "3", name: "Competitor 3", winner: false },

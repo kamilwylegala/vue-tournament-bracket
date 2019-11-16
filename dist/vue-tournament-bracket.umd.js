@@ -639,34 +639,34 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"647edc0e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Bracket.vue?vue&type=template&id=02dad778&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5855e00d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/Bracket.vue?vue&type=template&id=3b38fa2c&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.recursiveBracket)?_c('div',{staticClass:"vtb-wrapper"},[_c('bracket-node',{attrs:{"bracket-node":_vm.recursiveBracket,"highlighted-player-id":_vm.highlightedPlayerId},on:{"onSelectedPlayer":_vm.highlightPlayer,"onDeselectedPlayer":_vm.unhighlightPlayer},scopedSlots:_vm._u([{key:"player",fn:function(ref){
 var player = ref.player;
 return [_vm._t("player",null,{player:player})]}}])})],1):_vm._e()}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/Bracket.vue?vue&type=template&id=02dad778&
+// CONCATENATED MODULE: ./src/Bracket.vue?vue&type=template&id=3b38fa2c&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"647edc0e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BracketNode.vue?vue&type=template&id=908c14aa&
-var BracketNodevue_type_template_id_908c14aa_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vtb-item"},[_c('div',{class:_vm.getBracketNodeClass(_vm.bracketNode)},[_c('game-players',{attrs:{"bracket-node":_vm.bracketNode,"highlighted-player-id":_vm.highlightedPlayerId},on:{"onSelectedPlayer":_vm.highlightPlayer,"onDeselectedPlayer":_vm.unhighlightPlayer},scopedSlots:_vm._u([{key:"player",fn:function(ref){
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5855e00d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/BracketNode.vue?vue&type=template&id=6ad00390&
+var BracketNodevue_type_template_id_6ad00390_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vtb-item"},[_c('div',{class:_vm.getBracketNodeClass(_vm.bracketNode)},[_c('game-players',{attrs:{"bracket-node":_vm.bracketNode,"highlighted-player-id":_vm.highlightedPlayerId},on:{"onSelectedPlayer":_vm.highlightPlayer,"onDeselectedPlayer":_vm.unhighlightPlayer},scopedSlots:_vm._u([{key:"player",fn:function(ref){
 var player = ref.player;
 return [_vm._t("player",null,{player:player})]}}])})],1),(_vm.bracketNode.games[0] || _vm.bracketNode.games[1])?_c('div',{staticClass:"vtb-item-children"},[(_vm.bracketNode.games[0])?_c('div',{staticClass:"vtb-item-child"},[_c('bracket-node',{attrs:{"bracket-node":_vm.bracketNode.games[0],"highlighted-player-id":_vm.highlightedPlayerId},on:{"onSelectedPlayer":_vm.highlightPlayer,"onDeselectedPlayer":_vm.unhighlightPlayer},scopedSlots:_vm._u([{key:"player",fn:function(ref){
 var player = ref.player;
 return [_vm._t("player",null,{player:player})]}}])})],1):_vm._e(),(_vm.bracketNode.games[1])?_c('div',{staticClass:"vtb-item-child"},[_c('bracket-node',{attrs:{"bracket-node":_vm.bracketNode.games[1],"highlighted-player-id":_vm.highlightedPlayerId},on:{"onSelectedPlayer":_vm.highlightPlayer,"onDeselectedPlayer":_vm.unhighlightPlayer},scopedSlots:_vm._u([{key:"player",fn:function(ref){
 var player = ref.player;
 return [_vm._t("player",null,{player:player})]}}])})],1):_vm._e()]):_vm._e()])}
-var BracketNodevue_type_template_id_908c14aa_staticRenderFns = []
+var BracketNodevue_type_template_id_6ad00390_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/BracketNode.vue?vue&type=template&id=908c14aa&
+// CONCATENATED MODULE: ./src/components/BracketNode.vue?vue&type=template&id=6ad00390&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"647edc0e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/GamePlayers.vue?vue&type=template&id=69df034f&
-var GamePlayersvue_type_template_id_69df034f_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vtb-item-players"},[_c('div',{class:['vtb-player1', _vm.getPlayerClass(_vm.bracketNode.player1)],on:{"mouseover":function($event){_vm.highlightPlayer(_vm.bracketNode.player1.id)},"mouseleave":_vm.unhighlightPlayer}},[_vm._t("player",null,{player:_vm.bracketNode.player1})],2),_c('div',{class:['vtb-player2', _vm.getPlayerClass(_vm.bracketNode.player2)],on:{"mouseover":function($event){_vm.highlightPlayer(_vm.bracketNode.player2.id)},"mouseleave":_vm.unhighlightPlayer}},[_vm._t("player",null,{player:_vm.bracketNode.player2})],2)])}
-var GamePlayersvue_type_template_id_69df034f_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5855e00d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/GamePlayers.vue?vue&type=template&id=5b020065&
+var GamePlayersvue_type_template_id_5b020065_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vtb-item-players"},[_c('div',{class:['vtb-player1', _vm.getPlayerClass(_vm.bracketNode.player1)],on:{"mouseover":function($event){_vm.highlightPlayer(_vm.bracketNode.player1.id)},"mouseleave":_vm.unhighlightPlayer}},[_vm._t("player",null,{player:_vm.bracketNode.player1})],2),_c('div',{class:['vtb-player2', _vm.getPlayerClass(_vm.bracketNode.player2)],on:{"mouseover":function($event){_vm.highlightPlayer(_vm.bracketNode.player2.id)},"mouseleave":_vm.unhighlightPlayer}},[_vm._t("player",null,{player:_vm.bracketNode.player2})],2)])}
+var GamePlayersvue_type_template_id_5b020065_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/GamePlayers.vue?vue&type=template&id=69df034f&
+// CONCATENATED MODULE: ./src/components/GamePlayers.vue?vue&type=template&id=5b020065&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/GamePlayers.vue?vue&type=script&lang=js&
 //
@@ -823,8 +823,8 @@ function normalizeComponent (
 
 var component = normalizeComponent(
   components_GamePlayersvue_type_script_lang_js_,
-  GamePlayersvue_type_template_id_69df034f_render,
-  GamePlayersvue_type_template_id_69df034f_staticRenderFns,
+  GamePlayersvue_type_template_id_5b020065_render,
+  GamePlayersvue_type_template_id_5b020065_staticRenderFns,
   false,
   null,
   null,
@@ -936,8 +936,8 @@ var BracketNodevue_type_style_index_0_lang_css_ = __webpack_require__("d051");
 
 var BracketNode_component = normalizeComponent(
   components_BracketNodevue_type_script_lang_js_,
-  BracketNodevue_type_template_id_908c14aa_render,
-  BracketNodevue_type_template_id_908c14aa_staticRenderFns,
+  BracketNodevue_type_template_id_6ad00390_render,
+  BracketNodevue_type_template_id_6ad00390_staticRenderFns,
   false,
   null,
   null,
