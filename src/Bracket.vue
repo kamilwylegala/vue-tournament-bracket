@@ -6,8 +6,11 @@
             @onDeselectedPlayer="unhighlightPlayer"
             :highlighted-player-id="highlightedPlayerId"
         >
-            <template slot="player" slot-scope="{ player }">
-                <slot name="player" :player="player"/>
+            <template #player="{ player }">
+                <slot name="player" :player="player" />
+            </template>
+            <template #player-extension-bottom="{ match }">
+                <slot name="player-extension-bottom" :match="match" />
             </template>
         </bracket-node>
     </div>
@@ -25,7 +28,7 @@
         props: ["rounds"],
         data() {
             return {
-                highlightedPlayerId: null,
+                highlightedPlayerId: null
             };
         },
         computed: {
