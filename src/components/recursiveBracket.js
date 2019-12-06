@@ -1,5 +1,4 @@
 module.exports = {
-
     transform(rounds) {
         if (!rounds) {
             return null;
@@ -13,19 +12,17 @@ module.exports = {
         for (let i = 0; i < totalRounds; i++) {
             currentRound = rounds[i].games.map(game => {
                 return {
-                    player1: game.player1,
-                    player2: game.player2,
+                    ...game,
                     title: "round " + i,
                     games: [],
-                    hasParent: !!rounds[i+1]
-                }
+                    hasParent: !!rounds[i + 1]
+                };
             });
 
             if (previousRound.length === 0) {
                 previousRound = currentRound;
                 continue;
             }
-
 
             for (let j = 0; j < previousRound.length; j++) {
                 const matchForCurrentGame = Math.floor(j / 2);
@@ -35,8 +32,6 @@ module.exports = {
             previousRound = currentRound;
         }
 
-
         return currentRound[0] || null;
     }
-
 };

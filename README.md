@@ -116,6 +116,33 @@ const rounds = [
 
 ![Third place play-off](https://github.com/kamilwylegala/vue-tournament-bracket/raw/master/docs/thirdplaceplayoff.png)
 
+#### Bottom slot
+
+There is slot with whole match props, use it in following way:
+```html
+<bracket :rounds="rounds">
+    <template #player="{ player }">
+        {{ player.name }}
+    </template>
+    <template #player-extension-bottom="{ match }">
+        Extra info: {{ match.title }}
+    </template>
+</bracket>
+```
+May be useful for example for showing tooltips etc.
+
+![Bottom slot for match](https://github.com/kamilwylegala/vue-tournament-bracket/raw/master/docs/bottom-slot.png)
+
+### Game object
+
+Game object requires `player1` and `player2` objects. You can also add your own and e.g. reuse it in `players-extension-bottom` slot.
+
+Following properties are forbidden and are going to be replaced with `undefined`:
+- `games`
+- `hasParent`
+
+See `matchProperties` in `GamePlayers` for details.
+
 ### Player object
 
 Player object requires: `id` property, `winner` is optional, rest is up to you - rendering is customizable via scoped slot.

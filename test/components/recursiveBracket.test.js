@@ -3,6 +3,29 @@ const recursiveBracket = require("../../src/components/recursiveBracket");
 
 describe("recursive bracket", () => {
 
+    it("should provide all properties for game object from input so it's available in players-extension slot", () => {
+        const result = recursiveBracket.transform([
+            {
+                games: [
+                    {
+                        player1: { id: "4", name: "Competitor 4", winner: false },
+                        player2: { id: "8", name: "Competitor 8", winner: true },
+                        matchResult: "Winner by points"
+                    }
+                ]
+            }
+        ]);
+
+        result.should.be.eql({
+            player1: { id: "4", name: "Competitor 4", winner: false },
+            player2: { id: "8", name: "Competitor 8", winner: true },
+            matchResult: "Winner by points",
+            title: "round 0",
+            hasParent: false,
+            games: []
+        });
+    });
+
     it("should transform one game bracket", () => {
         const result = recursiveBracket.transform([
             {

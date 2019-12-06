@@ -1,6 +1,5 @@
 <template>
     <div class="vtb-item">
-
         <div :class="getBracketNodeClass(bracketNode)">
             <game-players
                 :bracket-node="bracketNode"
@@ -8,8 +7,11 @@
                 @onSelectedPlayer="highlightPlayer"
                 @onDeselectedPlayer="unhighlightPlayer"
             >
-                <template slot="player" slot-scope="{ player }">
-                    <slot name="player" :player="player"/>
+                <template #player="{ player }">
+                    <slot name="player" :player="player" />
+                </template>
+                <template #player-extension-bottom="{ match }">
+                    <slot name="player-extension-bottom" :match="match" />
                 </template>
             </game-players>
         </div>
@@ -22,8 +24,11 @@
                     @onSelectedPlayer="highlightPlayer"
                     @onDeselectedPlayer="unhighlightPlayer"
                 >
-                    <template slot="player" slot-scope="{ player }">
-                        <slot name="player" :player="player"/>
+                    <template #player="{ player }">
+                        <slot name="player" :player="player" />
+                    </template>
+                    <template #player-extension-bottom="{ match }">
+                        <slot name="player-extension-bottom" :match="match" />
                     </template>
                 </bracket-node>
             </div>
@@ -34,13 +39,15 @@
                     @onSelectedPlayer="highlightPlayer"
                     @onDeselectedPlayer="unhighlightPlayer"
                 >
-                    <template slot="player" slot-scope="{ player }">
-                        <slot name="player" :player="player"/>
+                    <template #player="{ player }">
+                        <slot name="player" :player="player" />
+                    </template>
+                    <template #player-extension-bottom="{ match }">
+                        <slot name="player-extension-bottom" :match="match" />
                     </template>
                 </bracket-node>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -49,7 +56,7 @@
 
     export default {
         name: "bracket-node",
-        components: {GamePlayers},
+        components: { GamePlayers },
         props: ["bracketNode", "highlightedPlayerId"],
         methods: {
             getBracketNodeClass(bracketNode) {
@@ -68,9 +75,7 @@
                     return "";
                 }
 
-                let clazz = player.winner
-                    ? "winner"
-                    : "defeated";
+                let clazz = player.winner ? "winner" : "defeated";
 
                 if (this.highlightedPlayerId === player.id) {
                     clazz += " highlight";
@@ -85,7 +90,7 @@
                 this.$emit("onDeselectedPlayer");
             }
         }
-    }
+    };
 </script>
 
 <style>
@@ -114,7 +119,7 @@
         color: white;
     }
 
-    .vtb-item-players div {
+    .vtb-item-players .vtb-player {
         padding: 10px;
     }
 
@@ -136,7 +141,7 @@
 
     .vtb-item-parent:after {
         position: absolute;
-        content: '';
+        content: "";
         width: 25px;
         height: 2px;
         left: 0;
@@ -161,7 +166,7 @@
     }
 
     .vtb-item-child:before {
-        content: '';
+        content: "";
         position: absolute;
         background-color: gray;
         right: 0;
@@ -172,7 +177,7 @@
     }
 
     .vtb-item-child:after {
-        content: '';
+        content: "";
         position: absolute;
         background-color: gray;
         right: -25px;
@@ -188,5 +193,4 @@
     .vtb-item-child:only-child:after {
         display: none;
     }
-
 </style>

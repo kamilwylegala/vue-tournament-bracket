@@ -14,19 +14,21 @@
     "test": "mocha --require should test/**/*.test.js"
   },
   "dependencies": {
-    "vue": "^2.5.21"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.2.0",
-    "@vue/cli-plugin-eslint": "^3.2.0",
-    "@vue/cli-service": "^3.8.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-mocha": "^5.2.1",
-    "eslint-plugin-vue": "^5.0.0",
+    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-plugin-eslint": "^3.12.1",
+    "@vue/cli-service": "^3.12.1",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-mocha": "^5.3.0",
+    "eslint-plugin-vue": "^5.2.3",
     "mocha": "^5.2.0",
+    "prettier": "1.19.1",
     "should": "^13.2.3",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.6.10"
   },
   "postcss": {
     "plugins": {
