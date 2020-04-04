@@ -169,6 +169,8 @@ See `package.json` to discover available commands.
 ## Releasing
 
 ```
+npm test
+npm run eslint
 npm run build
 git commit
 npm version <version>
