@@ -23,18 +23,22 @@
     export default {
         name: "bracket",
         components: {
-            "bracket-node": BracketNode
+            "bracket-node": BracketNode,
         },
-        props: ["rounds"],
+        props: ["rounds", "flatTree"],
         data() {
             return {
-                highlightedPlayerId: null
+                highlightedPlayerId: null,
             };
         },
         computed: {
             recursiveBracket() {
+                if (this.flatTree) {
+                    return recursiveBracket.transformFlatTree(this.flatTree);
+                }
+
                 return recursiveBracket.transform(this.rounds);
-            }
+            },
         },
         methods: {
             highlightPlayer(id) {
@@ -42,8 +46,8 @@
             },
             unhighlightPlayer() {
                 this.highlightedPlayerId = null;
-            }
-        }
+            },
+        },
     };
 </script>
 

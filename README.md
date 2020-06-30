@@ -8,7 +8,7 @@ Rendering is based on **flex**, see [browser support](https://caniuse.com/#feat=
 
 ![Example](https://github.com/kamilwylegala/vue-tournament-bracket/raw/master/docs/example.png)
 
-Real life example can be found here: [panel-rejestracyjny.pl](https://panel-rejestracyjny.pl/).
+Real life example can be found here: [martialmatch.com](https://martialmatch.com/).
  
 ## Installation and component usage
 
@@ -142,6 +142,59 @@ Following properties are forbidden and are going to be replaced with `undefined`
 - `hasParent`
 
 See `matchProperties` in `GamePlayers` for details.
+
+### Alternative input - flat tree
+
+Version 2.1 introduces option to build bracket tree from flat tree structure where child node points to its parent node. Structure is a bit simple but requires two additional properties on each game object: `id`, `next`. It might be helpful in generating double elimination brackets with repechages. Example:
+
+```
+ const rounds = [
+        //Repechage 1 of 3
+        {
+            id: 1,
+            next: 5, //Will be connected to game with id 5
+            player1: { id: "4", name: "Competitor 4", winner: true },
+            player2: { id: "5", name: "Competitor 5", winner: false },
+        },
+        {
+            id: 2,
+            next: 6,
+            player1: { id: "7", name: "Competitor 7", winner: false },
+            player2: { id: "8", name: "Competitor 8", winner: true },
+        },
+
+        //Repechage 2 of 3
+        {
+            id: 5,
+            next: 7,
+            player1: { id: "1", name: "Competitor 1", winner: false },
+            player2: { id: "4", name: "Competitor 4", winner: true },
+        },
+        {
+            id: 6,
+            next: 7,
+            player1: { id: "3", name: "Competitor 3", winner: false },
+            player2: { id: "8", name: "Competitor 8", winner: true },
+        },
+        
+        //Repechage 3 of 3 - 3rd place match
+        {
+            id: 7,
+            player1: { id: "4", name: "Competitor 4", winner: false },
+            player2: { id: "8", name: "Competitor 8", winner: true },
+        },
+    ];
+```
+
+Initialize bracket with `flatTree` props:
+```html
+<bracket :flat-tree="rounds">
+```
+
+It generates following bracket:
+
+![Repechage](https://github.com/kamilwylegala/vue-tournament-bracket/raw/master/docs/flat-tree.png)
+
 
 ### Player object
 
