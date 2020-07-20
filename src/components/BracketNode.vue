@@ -1,5 +1,5 @@
 <template>
-    <div class="vtb-item">
+    <div class="vtb-item" v-if="playersArePresent">
         <div :class="getBracketNodeClass(bracketNode)">
             <game-players
                 :bracket-node="bracketNode"
@@ -58,6 +58,11 @@
         name: "bracket-node",
         components: { GamePlayers },
         props: ["bracketNode", "highlightedPlayerId"],
+        computed: {
+            playersArePresent() {
+                return this.bracketNode.player1 && this.bracketNode.player1;
+            },
+        },
         methods: {
             getBracketNodeClass(bracketNode) {
                 if (bracketNode.games[0] || bracketNode.games[1]) {
@@ -88,8 +93,8 @@
             },
             unhighlightPlayer() {
                 this.$emit("onDeselectedPlayer");
-            }
-        }
+            },
+        },
     };
 </script>
 
