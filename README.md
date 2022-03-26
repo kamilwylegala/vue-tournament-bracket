@@ -209,6 +209,8 @@ Apply your custom style by overriding `Bracket` component CSS. See [BracketNode.
 
 ## Development
 
+Required Node.js version is **14.0.0** (eslint).
+
 Checkout repository and:
 ```
 npm install

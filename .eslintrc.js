@@ -1,17 +1,17 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es6": true,
-        "mocha": true,
-        "node": true
+    env: {
+        browser: true,
+        commonjs: true,
+        es6: true,
+        mocha: true,
+        node: true,
     },
-    "extends": ["eslint:recommended", "plugin:vue/recommended", "prettier"],
-    "parserOptions": {
-        "sourceType": "module"
+    extends: ["eslint:recommended", "plugin:vue/recommended", "prettier"],
+    parserOptions: {
+        sourceType: "module",
     },
     plugins: ["vue", "mocha"],
-    "rules": {
+    rules: {
         "no-extra-boolean-cast": "off",
         "max-params": ["error", 4],
         "max-statements": ["error", 30],
@@ -46,9 +46,15 @@ module.exports = {
                 singleline: 4,
                 multiline: {
                     max: 1,
-                    allowFirstLine: false
-                }
-            }
+                },
+            },
+        ],
+        "vue/first-attribute-linebreak": [
+            "error",
+            {
+                singleline: "ignore",
+                multiline: "below",
+            },
         ],
         "vue/no-multi-spaces": "error",
         "vue/mustache-interpolation-spacing": ["error", "always"],
@@ -59,14 +65,20 @@ module.exports = {
         "vue/return-in-computed-property": "error",
         "vue/no-template-key": "error",
         "vue/no-dupe-keys": "error",
-        "vue/html-indent": ["error", 4, {
-            "attribute": 1,
-            "baseIndent": 1,
-            "closeBracket": 0,
-            "alignAttributesVertically": true,
-            "ignores": []
-        }],
+        "vue/html-indent": [
+            "error",
+            4,
+            {
+                attribute: 1,
+                baseIndent: 1,
+                closeBracket: 0,
+                alignAttributesVertically: true,
+                ignores: [],
+            },
+        ],
+        "vue/multi-word-component-names": ["off"],
         "vue/prop-name-casing": "error",
+        "vue/component-definition-name-casing": ["error", "kebab-case"],
         "vue/require-prop-types": "off",
         "vue/order-in-components": "error",
         "vue/attributes-order": "off",
@@ -76,6 +88,6 @@ module.exports = {
         "vue/component-name-in-template-casing": ["error", "kebab-case"],
         "vue/multiline-html-element-content-newline": "off",
         "vue/html-closing-bracket-newline": "off",
-        "vue/no-v-html": "off"
-    }
+        "vue/no-v-html": "off",
+    },
 };
