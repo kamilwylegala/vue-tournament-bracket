@@ -26,7 +26,7 @@
     "eslint": "^8.12.0",
     "eslint-plugin-mocha": "^10.0.3",
     "eslint-plugin-vue": "^8.5.0",
-    "mocha": "^7.1.1",
+    "mocha": "^10.2.0",
     "prettier": "^2.6.1",
     "should": "^13.2.3",
     "vue-template-compiler": "^2.6.14"
