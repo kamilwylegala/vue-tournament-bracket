@@ -14,7 +14,7 @@
     "test": "mocha --require should test/**/*.test.js"
   },
   "dependencies": {
-    "vue": "^2.6.14"
+    "vue": "^3.2.0"
   },
   "devDependencies": {
     "@vue/babel-preset-app": "^5.0.4",
@@ -28,8 +28,7 @@
     "eslint-plugin-vue": "^8.5.0",
     "mocha": "^7.1.1",
     "prettier": "^2.6.1",
-    "should": "^13.2.3",
-    "vue-template-compiler": "^2.6.14"
+    "should": "^13.2.3"
   },
   "postcss": {
     "plugins": {
