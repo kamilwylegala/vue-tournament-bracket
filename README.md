@@ -1,6 +1,6 @@
 # vue-tournament-bracket
 
-Vue component for rendering single elemination tournament brackets.
+Vue component for rendering single elimination tournament brackets. Compatible with Vue 3. For Vue 2 support install 2.* version of the package.
 
 Based on: [https://codepen.io/sdudnyk/pen/bWbqMb](https://codepen.io/sdudnyk/pen/bWbqMb).
 
